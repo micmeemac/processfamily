@@ -26,7 +26,7 @@ if sys.platform.startswith('win'):
     import win32security
 
     from processfamily import win32Popen
-else:
+elif not sys.platform.startswith('darwin'):
     import prctl
 
 logger = logging.getLogger("processfamily")
